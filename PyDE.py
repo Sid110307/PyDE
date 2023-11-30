@@ -33,7 +33,7 @@ def save(*args):
         path = asksaveasfilename(filetypes = [("Python Files", ".py")])
     else:
         path = filepath
-    with open(path + ".py", "w") as file:
+    with open(f"{path}.py", "w") as file:
         code = editor.get("1.0", END)
         file.write(code)
         open_file(file)
